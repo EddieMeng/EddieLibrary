@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SimonLibrary.iml" filepath="$PROJECT_DIR$/SimonLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidGeneric/androidgeneric.iml" filepath="$PROJECT_DIR$/androidGeneric/androidgeneric.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customwidget/customwidget.iml" filepath="$PROJECT_DIR$/customwidget/customwidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataStructure/dataStructure.iml" filepath="$PROJECT_DIR$/dataStructure/dataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/functionalProgram/functionalProgram.iml" filepath="$PROJECT_DIR$/functionalProgram/functionalProgram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hybrid/hybrid.iml" filepath="$PROJECT_DIR$/hybrid/hybrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageCache/imageCache.iml" filepath="$PROJECT_DIR$/imageCache/imageCache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
+    </modules>
+  </component>
+</project>
