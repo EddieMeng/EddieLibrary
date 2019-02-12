@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 //                System.out.println(s);
 //            }
 //        });
+//        Observable<String> observable = Observable.just("Hello");
         Observable<String> observable = Observable.just("Hello");
         observable.subscribe(new Consumer<String>() {
             @Override
