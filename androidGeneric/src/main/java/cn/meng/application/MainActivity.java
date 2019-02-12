@@ -1,10 +1,16 @@
 package cn.meng.application;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +26,21 @@ public class MainActivity extends AppCompatActivity {
         fl = new FrameLayout.LayoutParams(150, 150, Gravity.CENTER);
         porterDuffView.setLayoutParams(fl);
         uiContainer.addView(porterDuffView);
+        getRunningTask();
+    }
+
+
+    private void getRunningTask() {
+        Intent intent = new Intent();
+        android.app.ActivityManager activityManager = (android.app.ActivityManager)this.getSystemService(Context.ACTIVITY_SERVICE);
+        List<android.app.ActivityManager.RunningAppProcessInfo> infoList = activityManager.getRunningAppProcesses();
+        for (android.app.ActivityManager.RunningAppProcessInfo info : infoList) {
+            Log.i("processInfo", info.processName);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }

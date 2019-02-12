@@ -1,7 +1,11 @@
 package cn.meng.application;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.IntentService;
+import android.app.LauncherActivity;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.text.InputType;
 import android.view.Gravity;
@@ -23,6 +27,14 @@ public class InputMethodView extends FrameLayout{
         initView();
     }
 
+    /**
+     * <p>The {@link PorterDuffView} class contains utility methods to
+     * convert from other common forms to {@code Callable} classes.
+     *
+     * @see PorterDuffView
+     * @since 1.5
+     * @author Doug Lea
+     */
     private void initView() {
         EditText editText = new EditText(mContext);
         editText.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -30,11 +42,16 @@ public class InputMethodView extends FrameLayout{
         ((Activity)mContext).getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
 //        ((Activity)mContext).getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 //        ((Activity)mContext).getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_UNSPECIFIED);
-
         FrameLayout.LayoutParams fl = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
         editText.setLayoutParams(fl);
         this.addView(editText);
+
     }
+
+
+
+
+
 
 
 }

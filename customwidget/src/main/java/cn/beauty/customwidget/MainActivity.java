@@ -1,5 +1,8 @@
 package cn.beauty.customwidget;
 
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ValueAnimator;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.os.Bundle;
@@ -22,5 +25,6 @@ public class MainActivity extends AppCompatActivity {
         Canvas canvas = new Canvas();
         Log.i("dstX", dst[0] + "");
         Log.i("dstY", dst[1] + "");
+
     }
 }

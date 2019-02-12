@@ -14,13 +14,13 @@ import java.util.List;
  */
 public class MediaLoader<T extends MediaModel>{
 
-    public List<T> loadVideo(Context context) {
-        List<T> videoInfo = new ArrayList<>();
-        if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-
-
-        }
-    }
+//    public List<T> loadVideo(Context context) {
+//        List<T> videoInfo = new ArrayList<>();
+//        if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+//
+//
+//        }
+//    }
 
 
 }

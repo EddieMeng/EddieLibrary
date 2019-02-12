@@ -13,7 +13,6 @@ import android.widget.ImageView;
  */
 
 public class ZoomableView extends ImageView {
-
     public ZoomableView(Context context) {
         super(context);
         this.setScaleType(ScaleType.MATRIX);
@@ -21,7 +20,6 @@ public class ZoomableView extends ImageView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        new PorterDuffXfermode(PorterDuff.Mode);
         int action = event.getActionMasked();
         switch (action) {
             case MotionEvent.ACTION_DOWN : {

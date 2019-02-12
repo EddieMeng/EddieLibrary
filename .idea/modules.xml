@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimonLibrary.iml" filepath="$PROJECT_DIR$/SimonLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidGeneric/androidgeneric.iml" filepath="$PROJECT_DIR$/androidGeneric/androidgeneric.iml" />
@@ -12,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/functionalProgram/functionalProgram.iml" filepath="$PROJECT_DIR$/functionalProgram/functionalProgram.iml" />
       <module fileurl="file://$PROJECT_DIR$/hybrid/hybrid.iml" filepath="$PROJECT_DIR$/hybrid/hybrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageCache/imageCache.iml" filepath="$PROJECT_DIR$/imageCache/imageCache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageloading/imageloading.iml" filepath="$PROJECT_DIR$/imageloading/imageloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin/kotlin.iml" filepath="$PROJECT_DIR$/kotlin/kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
     </modules>
   </component>
