@@ -1,11 +1,7 @@
 package cn.meng.application;
 
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.IntentService;
-import android.app.LauncherActivity;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.text.InputType;
 import android.view.Gravity;
@@ -13,6 +9,12 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+
+import java.security.KeyPairGenerator;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
+import cn.meng.application.customView.PorterDuffView;
 
 /**
  * Created by Simon Meng on 2018/8/16.

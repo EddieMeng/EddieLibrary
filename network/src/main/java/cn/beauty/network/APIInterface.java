@@ -1,5 +1,13 @@
 package cn.beauty.network;
 
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Query;
+
 /**
  * Created by Simon Meng on 2018/4/8.
  * Guangzhou Beauty Information Technology Co.,Ltd
@@ -7,7 +15,18 @@ package cn.beauty.network;
 
 public interface APIInterface {
 
+     @GET("/api/unknown")
+     Call<MultipleResource> doGetListResources();
 
+     @POST("/api/users")
+     Call<User> createUser(@Body User user);
+
+     @GET("/api/users?")
+     Call<UserList> doGetUserList(@Query("page") String page);
+
+     @FormUrlEncoded
+     @POST("/api/users?")
+     Call<UserList> doCreateUserWithFiled(@Field("name") String name, @Field("job") String job);
 
 
 }

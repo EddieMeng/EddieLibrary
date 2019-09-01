@@ -1,28 +1,38 @@
 package com.example.java;
 
+import com.example.java.concurrency.NotifyRunnable;
+import com.example.java.concurrency.WaitRunnable;
+
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+
 
 public class MyClass {
 
     public static void main(String[] args) {
-        String city = "广州";
-        byte[] byteResult = city.getBytes();
-        // todo
-        System.out.println(byteResult.length);
+        // create ThreadPoolExecutor actually.
 
-        char[] charArray = city.toCharArray();
-        System.out.println(charArray.length);
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        Executors.newCachedThreadPool();
 
-        Integer a = 300;
-        Integer b = 300;
-        if (a == b) {
-            System.out.println("equal");
-        } else {
-            System.out.println("not equal");
+        // create FinalizableDelegatedExcutorService actually.
+        Executors.newSingleThreadExecutor();
+
+        WaitRunnable runnable1 = new WaitRunnable();
+        executorService.submit(runnable1);
+        try {
+            Thread.sleep(5000);
+            NotifyRunnable runnable2 = new NotifyRunnable();
+            executorService.submit(runnable2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
+        int i = 7;
+        double d = i;
+
     }
-
-
-
 }

@@ -1,5 +1,7 @@
 package cn.beauty.designpattern.proxyPattern;
 
+import java.util.logging.Handler;
+
 /**
  * Created by Simon Meng on 2017/11/28.
  * Guangzhou Beauty Information Technology Co.,Ltd

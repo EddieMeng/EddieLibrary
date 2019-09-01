@@ -1,16 +1,24 @@
 package cn.meng.application;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import java.util.List;
+
+import cn.meng.application.aidl.client.ClientDemo;
+import cn.meng.application.component.MyFragment;
+import cn.meng.application.customView.CustomView;
+import cn.meng.application.customView.PorterDuffView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,17 +26,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FrameLayout uiContainer = new FrameLayout(this);
+        uiContainer.setId(R.id.uiContainer);
         FrameLayout.LayoutParams fl = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         uiContainer.setLayoutParams(fl);
         setContentView(uiContainer);
 
-        PorterDuffView porterDuffView = new PorterDuffView(this);
-        fl = new FrameLayout.LayoutParams(150, 150, Gravity.CENTER);
-        porterDuffView.setLayoutParams(fl);
-        uiContainer.addView(porterDuffView);
-        getRunningTask();
-    }
+        CustomView customView = new CustomView(this);
+        fl = new FrameLayout.LayoutParams(500, 100);
+        customView.setLayoutParams(fl);
+        uiContainer.addView(customView);
 
+        // add the fragment to activity programmatically.
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction  = fragmentManager.beginTransaction();
+        MyFragment myFragment = new MyFragment();
+        transaction.add(R.id.uiContainer, myFragment);
+        transaction.commit();
+
+        ClientDemo clientDemo = new ClientDemo();
+        clientDemo.start(this);
+    }
 
     private void getRunningTask() {
         Intent intent = new Intent();
@@ -39,8 +56,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
 }

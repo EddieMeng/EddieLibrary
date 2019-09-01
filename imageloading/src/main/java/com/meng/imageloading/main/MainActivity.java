@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        GlideExample();
+    }
+
+    private void frescoExample() {
         Uri uri = Uri.parse("https://raw.githubusercontent.com/facebook/fresco/master/docs/static/logo.png");
         SimpleDraweeView simpleDraweeView = findViewById(R.id.simpleDraweeView);
         Drawable placeHolderImage = this.getResources().getDrawable(R.mipmap.ic_launcher);
@@ -38,8 +42,19 @@ public class MainActivity extends AppCompatActivity {
         simpleDraweeView.getHierarchy().setPlaceholderImage(placeHolderImage);
         simpleDraweeView.getHierarchy().setFailureImage(failureImage);
         simpleDraweeView.getHierarchy().setRetryImage(retryImage);
-
         //Rotation
+    }
+
+    private void GlideExample() {
+
+
+
 
     }
+
+
+
+
+
+
 }

@@ -15,7 +15,6 @@ open class MyKotlin(name: String, surName: String) {
 //
 //     }
 
-
     fun toast(message : String, length : Int = Toast.LENGTH_SHORT) {
 
     }

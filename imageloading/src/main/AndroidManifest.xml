@@ -13,7 +13,7 @@
         android:name="com.meng.imageloading.main.MyApplication">
 
 
-        <activity android:name="com.meng.imageloading.main.MainActivity">
+        <activity android:name="com.meng.imageloading.main.cn.meng.MainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
