@@ -9,11 +9,12 @@ import java.util.concurrent.locks.Lock;
  * can be specified. while we can specify the property by lock api.
  *
  */
-public class JavaLockExample {
+public class LockAndNotify {
 
     public static void main(String[] args) {
 
     }
+
 
 
 

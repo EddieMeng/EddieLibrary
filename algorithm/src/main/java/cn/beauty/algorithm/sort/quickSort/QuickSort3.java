@@ -5,6 +5,7 @@ import cn.beauty.algorithm.sort.BaseSort;
 /**
  * BigO(n^2)
  *
+ *
  */
 
 public class QuickSort3 extends BaseSort {

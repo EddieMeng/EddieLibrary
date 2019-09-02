@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimonLibrary.iml" filepath="$PROJECT_DIR$/SimonLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidGeneric/androidGeneric.iml" filepath="$PROJECT_DIR$/androidGeneric/androidGeneric.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidGeneric/androidgeneric.iml" filepath="$PROJECT_DIR$/androidGeneric/androidgeneric.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/architecture/architecture.iml" filepath="$PROJECT_DIR$/architecture/architecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/customwidget/customwidget.iml" filepath="$PROJECT_DIR$/customwidget/customwidget.iml" />

@@ -7,7 +7,6 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.ValueCallback;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 

@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import cn.meng.application.aidl.client.ClientDemo;
 import cn.meng.application.component.MyFragment;
@@ -43,8 +45,12 @@ public class MainActivity extends AppCompatActivity {
         transaction.add(R.id.uiContainer, myFragment);
         transaction.commit();
 
-        ClientDemo clientDemo = new ClientDemo();
-        clientDemo.start(this);
+//        ClientDemo clientDemo = new ClientDemo();
+//        clientDemo.start(this);
+
+        Map<String, Integer> map = new HashMap<>(1);
+        map.put("1", 1);
+        map.put("2", 2);
     }
 
     private void getRunningTask() {

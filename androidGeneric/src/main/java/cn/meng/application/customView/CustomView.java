@@ -16,7 +16,6 @@ public class CustomView extends View {
         super(context);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(Color.RED);
-        ViewGroup
     }
 
 

@@ -124,7 +124,19 @@ public class MyHashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clo
         mTable = newTab;
 
         if (oldTable != null) {
+            for (int j = 0; j < oldCap; j++) {
+                Node<K,V> e;
+                //todo why oldTable element point to null;
+                if ((e = oldTable[j]) != null) {
+                    oldTable[j] = null;
+                }
+                if (e.mNext == null) {
+                    newTab[e.mHash & (newCap - 1)] = e;
+                } else {
 
+
+                }
+            }
 
         }
 
