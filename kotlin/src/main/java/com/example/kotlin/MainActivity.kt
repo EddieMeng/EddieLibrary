@@ -2,19 +2,9 @@ package com.example.kotlin
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.widget.Toast
-import com.example.kotlin.Basic.*
-import com.example.kotlin.ClassAndObjects.DerivedClass
-import com.example.kotlin.ClassAndObjects.GetterAndSetter
-import com.example.kotlin.ClassAndObjects.InitOrderDemo
-import com.example.kotlin.ClassAndObjects.Son
+import com.example.kotlin.ClassAndObjects.*
 import com.example.kotlin.GettingStarted.Customer
 import com.example.kotlin.GettingStarted.Ranges
-import com.example.kotlin.Properties.Person
-import java.util.*
-
 
 /**
  * Compatibility
@@ -99,8 +89,8 @@ class MainActivity : AppCompatActivity() {
 //        var returnAtLables = ReturnAtLabels()
 //        var orderDemo = InitOrderDemo("Kitty")
 
-        GettingStarted()
-//        ClassAndObjectsExample()
+//        GettingStarted()
+        ClassAndObjectsExample()
     }
 
     fun GettingStarted() {
@@ -122,7 +112,22 @@ class MainActivity : AppCompatActivity() {
 //        getterAndSetter.setterVisibility = "abc"
         println(getterAndSetter.stringRepresentation)
 
+        var visiblityInstance = Cons(5)
+        printClassName(Rectangle())
+
+        var example = Example()
+        example.printFunctionType()
+
+        var nullVariable: Any? = null
+        nullVariable.toString()
+
+        MyClass.printCompanion()
+
+        var list = listOf("red", "green", "blue")
+        list.getLongestString()
     }
+
+
 
 
 
