@@ -89,6 +89,8 @@ class MainActivity : AppCompatActivity() {
 //        var returnAtLables = ReturnAtLabels()
 //        var orderDemo = InitOrderDemo("Kitty")
 
+
+
 //        GettingStarted()
         ClassAndObjectsExample()
     }
@@ -125,7 +127,37 @@ class MainActivity : AppCompatActivity() {
 
         var list = listOf("red", "green", "blue")
         list.getLongestString()
+
+        var connection = Connection(Host("kotl.in"), 443)
+        connection.connect()
+
+        val person1 = DataClasses_Person("John", 40)
+        val person2 = DataClasses_Person("Rose Marry", 50);
+        println(person1.toString())
+
+        val jack = DataClasses_Person("Jack", 1)
+        val oldJack = jack.copy(age = 2)
+
+        val nestValue = NestedClasses_Outer.nested().foo()
+        val innerValue = NestedClasses_Outer().Inner().foo()
+        println(nestValue)
+        println(innerValue)
+
+        val arrayOfEnum = EnumClass.values()
+        val one = EnumClass.valueOf("ONE")
+        println(one)
+
+        printAllValues<RGB>()
+
+        var ab: Objects_A = object : Objects_A(1), B{
+            override val y = 15
+        }
+        println(ab.y)
+
+
+
     }
+
 
 
 

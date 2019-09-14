@@ -74,7 +74,38 @@ fun List<String>.getLongestString() {
 
 }
 
-
 // <---------------------------- Declaring extensions as members -------------------------->
+// extension receiver
+class Host(val hostname: String) {
+    fun printHostname() {
+        println(hostname)
+    }
+}
+
+// dispatch receiver
+class Connection(val host: Host, var port: Int) {
+    fun printPort() {
+        println(port)
+    }
+
+    fun Host.printConnectionString(p: Int) {
+        printHostname()
+        println(":")
+        printPort()
+    }
+
+    fun Host.getConnectionString() {
+        toString()
+        this@Connection.toString()
+    }
+
+    fun connect() {
+        host.printConnectionString(port)
+    }
+}
+
+// <------------------------ Note on Visibility -------------------------------->
+
+
 
 

@@ -1,0 +1,5 @@
+1.Trigger Builds remotely
+   hook script
+2. Build after other projects are built
+3. Build periodically
+4. Poll SCM
