@@ -15,7 +15,7 @@ interface MyInterface {
 class Child : MyInterface {
 
     override fun bar() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 }
 

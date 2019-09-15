@@ -55,7 +55,6 @@ class BasicTypes constructor() {
         val yArray: LongArray = longArrayOf(4, 5, 6)
     }
 
-    //todo introduce in kotlin 1.3
     private fun UnsignedIntegers() {
 
     }

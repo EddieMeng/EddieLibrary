@@ -24,6 +24,9 @@ import com.example.kotlin.GettingStarted.Ranges
  */
 
 
+typealias AInner = TypeAliases_A.Inner
+
+
 class MainActivity : AppCompatActivity() {
     private val items = listOf(
             "Mon 6/23 - Sunny - 31/17",
@@ -35,10 +38,10 @@ class MainActivity : AppCompatActivity() {
             "Sun 6/29 - Sunny - 20/7")
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         // NULL SAFETY
 //        var artist : Artist? = null
 //        artist.toString();
@@ -154,8 +157,15 @@ class MainActivity : AppCompatActivity() {
         }
         println(ab.y)
 
+        val myClass = Objects_MyClass()
+        val myClass2 = Objects_MyClass.create()
 
+        val myClass3 = Objects_MyClass
+        val f: Factory<Objects_MyClass> = Objects_MyClass
 
+        val name = Name("kotlin")
+        name.greet()
+        println(name.length)
     }
 
 

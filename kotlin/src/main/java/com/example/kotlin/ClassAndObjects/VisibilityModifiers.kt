@@ -29,7 +29,6 @@ open class Outer {
     protected class Nested {
         val e: Int = 5
     }
-    //todo kotlin progress here
 }
 
 class Subclass : Outer() {
