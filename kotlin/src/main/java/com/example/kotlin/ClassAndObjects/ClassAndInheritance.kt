@@ -4,8 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 
-class Person constructor(name: String) {
 
+// <-----------Constructors------------->
+class Person constructor(name: String) {
 
 }
 

@@ -35,18 +35,20 @@ class DefiningVariables {
 
 }
 
+// <------------- String templates -------------->
 class UsingStringTemplates {
     var a = 1
     val s1 = "a is $a"
 
     fun usingString() {
         a = 2
-//        val s2 = s1.replace("is", "was")
         val s2 = "${s1.replace("is", "was")}, but now is $a"
     }
 
 }
 
+
+// <------------- Conditional expressions -------------->
 class UsingConditionalExpression {
 
     fun maxOf(a: Int, b: Int): Int {
@@ -61,6 +63,7 @@ class UsingConditionalExpression {
 
 }
 
+// <------------- Nullable values and null checks -------------->
 class UsingNullableValuesAndCheckingForNull {
 
     fun parseInt(str: String): Int? {
@@ -79,8 +82,9 @@ class UsingNullableValuesAndCheckingForNull {
     }
 }
 
-class UsingTypeChecksAndAutomaticCasts {
+// <------------- Type checks and automatic casts -------------->
 
+class UsingTypeChecksAndAutomaticCasts {
     fun getStringLength(obj: Any): Int? {
         if (obj is String) {
             return obj.length
@@ -89,6 +93,19 @@ class UsingTypeChecksAndAutomaticCasts {
     }
 }
 
+fun getStringLength(obj: Any): Int? {
+//    if (obj !is String) {
+//        return null
+//    }
+//    return obj.length
+    if (obj is String && obj.length > 0) {
+        return obj.length
+    }
+    return null
+}
+
+
+// <------------- for loop -------------->
 class UsingForLoop {
 
     fun forLoop() {
@@ -108,6 +125,7 @@ class UsingForLoop {
     }
 }
 
+// <------------- while loop -------------->
 class UsingWhileLoop {
     fun whileLoop() {
         val items = listOf("apple", "banana", "kiwifruit")
@@ -119,26 +137,40 @@ class UsingWhileLoop {
     }
 }
 
+// <------------- when loop -------------->
 class UsingWhenExpression {
     fun describe(obj: Any): String =
             when (obj) {
-                1          -> "One"
-                "Hello"    -> "Greeting"
-                is Long    -> "Long"
+                1 -> "One"
+                "Hello" -> "Greeting"
+                is Long -> "Long"
                 !is String -> "Not a String"
-                else       -> "Unknown"
+                else -> "Unknown"
             }
 }
 
+// <------------- Ranges -------------->
 class Ranges {
     init {
         val x = 10
         val y = 9
 
-        if (x in 1..y+1) {
+        if (x in 1..y + 1) {
             println("fits in range")
         }
     }
+
+    fun notInRange() {
+        var list = listOf("a", "b", "c")
+        if (-1 !in 0..list.lastIndex) {
+            println("-1 is out of range")
+        }
+
+        if (list.size !in list.indices) {
+            println("list size is out of valid list indices range, too")
+        }
+    }
+
 
     fun overProgressionByStep() {
         for (x in 1..10 step 2) {

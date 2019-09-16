@@ -3,6 +3,9 @@ package com.example.kotlin
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.kotlin.ClassAndObjects.*
+import com.example.kotlin.FunctionsAndLambds.asList
+import com.example.kotlin.FunctionsAndLambds.foo
+import com.example.kotlin.FunctionsAndLambds.reformat
 import com.example.kotlin.GettingStarted.Customer
 import com.example.kotlin.GettingStarted.Ranges
 
@@ -166,6 +169,19 @@ class MainActivity : AppCompatActivity() {
         val name = Name("kotlin")
         name.greet()
         println(name.length)
+
+        //named arguments
+        foo(baz = 5)
+
+        reformat("str")
+        reformat("str", true, true, false, ' ')
+        reformat(str = "str", normalizeCase = true, upperCaseFirstLetter = true, divideByCamelHumps = true, wordSeparator = '_')
+        reformat(str = "str", divideByCamelHumps = true)
+        reformat("str", normalizeCase = true)
+
+        val a = arrayOf(4, 5, 6)
+        asList(1, 2, *a, 3)
+
     }
 
 
