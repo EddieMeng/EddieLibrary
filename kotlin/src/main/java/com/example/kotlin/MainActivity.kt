@@ -182,6 +182,7 @@ class MainActivity : AppCompatActivity() {
         val a = arrayOf(4, 5, 6)
         asList(1, 2, *a, 3)
 
+        1 shl 2
     }
 
 

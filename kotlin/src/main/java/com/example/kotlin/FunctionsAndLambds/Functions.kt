@@ -66,7 +66,26 @@ fun <T> asList(vararg ts: T): List<T> {
 
 // <------------------ Infix notation ---------------------->
 
+infix fun Int.shl(x: Int): Int{
+    return 0
+}
 
+// <------------------ Function Scope ----------------------->
+
+// <------- Local Function --------->
+fun scaleFiveTime(number: Int): Int {
+    fun functionImpl(number: Int): Int {
+        return number * 5
+    }
+    return functionImpl(number)
+}
+
+// <--------- Generic functions --------------->
+fun <T> singletonList(item: T) {
+
+}
+
+// <--------- Tail recursive functions ------------>
 
 
 
