@@ -8,6 +8,7 @@ import com.example.kotlin.FunctionsAndLambds.foo
 import com.example.kotlin.FunctionsAndLambds.reformat
 import com.example.kotlin.GettingStarted.Customer
 import com.example.kotlin.GettingStarted.Ranges
+import com.example.kotlin.FunctionsAndLambds.*
 
 /**
  * Compatibility
@@ -39,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             "Fri 6/27 - Foggy - 21/10",
             "Sat 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
             "Sun 6/29 - Sunny - 20/7")
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -96,9 +96,9 @@ class MainActivity : AppCompatActivity() {
 //        var orderDemo = InitOrderDemo("Kitty")
 
 
-
 //        GettingStarted()
-        ClassAndObjectsExample()
+//        ClassAndObjectsExample()
+        FunctionsAndLambds()
     }
 
     fun GettingStarted() {
@@ -155,7 +155,7 @@ class MainActivity : AppCompatActivity() {
 
         printAllValues<RGB>()
 
-        var ab: Objects_A = object : Objects_A(1), B{
+        var ab: Objects_A = object : Objects_A(1), B {
             override val y = 15
         }
         println(ab.y)
@@ -169,7 +169,9 @@ class MainActivity : AppCompatActivity() {
         val name = Name("kotlin")
         name.greet()
         println(name.length)
+    }
 
+    fun FunctionsAndLambds() {
         //named arguments
         foo(baz = 5)
 
@@ -183,12 +185,28 @@ class MainActivity : AppCompatActivity() {
         asList(1, 2, *a, 3)
 
         1 shl 2
-    }
+
+        val items = listOf(1, 2, 3, 4)
+
+        items.fold(0, {
+            acc: Int, i: Int ->
+            print("acc = $acc, i = $i, ")
+            val result  = acc + i
+            println("result = $result")
+           result
+        })
+
+        val joinedToString = items.fold("Elements", {
+            acc, i ->
+            acc + " " + i
+        })
+
+        val product = items.fold(1, Int::times)
 
 
 
 
-
+}
 
 
 }

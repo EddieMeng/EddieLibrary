@@ -3,6 +3,7 @@ package com.example.kotlin.ClassAndObjects
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import org.jetbrains.annotations.Nullable
 
 
 // <-----------Constructors------------->
@@ -33,10 +34,12 @@ class InitOrderDemo(name: String) {
 class Person3(name: String) {
     val children: MutableList<Person3> = mutableListOf<Person3>()
 
-    constructor(name: String, parent: Person3) : this(name) {
+    constructor(name: String, parent: Person3): this(name){
         parent.children.add(this)
     }
 }
+
+//todo Review Progress Here
 
 
 open class Base(p: Int)
