@@ -8,7 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/androidGeneric/androidgeneric.iml" filepath="$PROJECT_DIR$/androidGeneric/androidgeneric.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/architecture/architecture.iml" filepath="$PROJECT_DIR$/architecture/architecture.iml" />
-      <module fileurl="file://$PROJECT_DIR$/customwidget/customwidget.iml" filepath="$PROJECT_DIR$/customwidget/customwidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/dataStructure/dataStructure.iml" filepath="$PROJECT_DIR$/dataStructure/dataStructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/functionalProgram/functionalProgram.iml" filepath="$PROJECT_DIR$/functionalProgram/functionalProgram.iml" />
@@ -17,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/imageloading/imageloading.iml" filepath="$PROJECT_DIR$/imageloading/imageloading.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin/kotlin.iml" filepath="$PROJECT_DIR$/kotlin/kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projecrtmanagement/projecrtmanagement.iml" filepath="$PROJECT_DIR$/projecrtmanagement/projecrtmanagement.iml" />
     </modules>
   </component>
 </project>

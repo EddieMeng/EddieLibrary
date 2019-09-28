@@ -24,7 +24,6 @@ class DataActivity : AppCompatActivity() {
         myHashMap.put(1, 1)
         myHashMap.put(2, 2)
 
-        //todo implemnt for loop
         for ((key, value) in myHashMap) {
 
         }

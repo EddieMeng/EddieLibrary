@@ -56,7 +56,6 @@ object DefaultListener : SipSession.Listener() {
 
 
 // <----------------- Companion Objects ----------------->
-//todo kotlin progress here
 class Objects_MyClass {
     companion object: Factory<Objects_MyClass>{
         override fun create(): Objects_MyClass {

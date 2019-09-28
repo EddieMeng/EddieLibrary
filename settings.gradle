@@ -1,1 +1,1 @@
-include ':app', ':imageCache', ':designpattern', ':customwidget', ':hybrid', ':network', ':algorithm', ':algorithm', ':dataStructure', ':algorithm', ':androidgeneric', ':androidGeneric', ':functionalProgram', ':kotlin', ':Java', ':imageloading', ':architecture'
+include ':app', ':imageCache', ':designpattern', ':hybrid', ':network', ':algorithm', ':algorithm', ':dataStructure', ':algorithm', ':androidgeneric', ':androidGeneric', ':functionalProgram', ':kotlin', ':Java', ':imageloading', ':architecture', ':projecrtmanagement'
