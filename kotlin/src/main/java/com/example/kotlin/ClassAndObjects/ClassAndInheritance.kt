@@ -34,24 +34,40 @@ class InitOrderDemo(name: String) {
 class Person3(name: String) {
     val children: MutableList<Person3> = mutableListOf<Person3>()
 
-    constructor(name: String, parent: Person3): this(name){
+    constructor(name: String, parent: Person3) : this(name) {
         parent.children.add(this)
     }
 }
 
+
+/**
+ *  If you do not want your class to have a public constructor,
+ *  you need to declare an empty primary constructor with non-default visibility:
+ */
+class DontCreateMe private constructor() {
+
+
+}
+
+
 //todo Review Progress Here
 
 
-open class Base(p: Int)
+open
+
+class Base(p: Int)
 
 class Derived(p: Int) : Base(p)
 
+// Note that in this case different secondary constructors
+// can call different constructors of the base type:
 class MyView : View {
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
 }
 
 // Overriding Methods
+// Kotlin requires explicit modifiers for overridable members
 open class Base2 {
     open fun v() {
 
@@ -90,6 +106,17 @@ class Bar1 : Foo() {
 
 // 1.Use the override keyworld as part of the property declaration in a primary constructor
 // 2. Override val with var property
+open class ClassAndInheritance_Shape() {
+    open val vertexCount: Int = 0
+}
+
+class ClassAndInheritance_Rectangle: ClassAndInheritance_Shape() {
+    override val vertexCount: Int = 4
+}
+
+// 1.Note that you can use the override keyword as part of the property
+// declaration in a primary constructor.
+// 2.you can override val with var, but not vice versa.
 interface Foo2 {
     val count: Int
 }
@@ -101,7 +128,6 @@ class Bar3() : Foo2 {
     override var count: Int = 0
 }
 
-
 /**
  * <!-------Derived class initialization order-----------!>
  */
@@ -111,6 +137,7 @@ open class BaseClass(val name: String) {
     }
 
     open val size: Int = name.length.also { println("Initializing size in Base: $it") }
+
 }
 
 class DerivedClass(name: String, val lastName: String) : BaseClass(name.capitalize().also { println("Argument for Base: $it") }) {
@@ -153,6 +180,35 @@ class Son : Parent() {
     override val x: Int get() = super.x + 1
 }
 
+open class ClassAndInheritance_Rectangle2 {
+    open fun draw() {
+        println("Drawing a rectangle")
+    }
+    val borderColor: String get() = "black"
+
+}
+
+class FilledRectangle: ClassAndInheritance_Rectangle2() {
+    override fun draw() {
+        super.draw()
+        println("Filling the rectangle")
+    }
+    val fillColor: String get() = super.borderColor
+
+    // access outer class's superclass
+    inner class Filler {
+        fun fill() {
+
+        }
+
+        fun drawAndFill() {
+            super@FilledRectangle.draw()
+            fill()
+            println("Drawn a filled rectangle with color ${super@FilledRectangle.borderColor}")
+        }
+    }
+}
+
 
 /**
  *
@@ -186,7 +242,6 @@ class C : A(), B {
         super<B>.f()
     }
 }
-
 
 
 /**

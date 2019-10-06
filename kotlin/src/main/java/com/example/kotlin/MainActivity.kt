@@ -98,7 +98,8 @@ class MainActivity : AppCompatActivity() {
 
 //        GettingStarted()
 //        ClassAndObjectsExample()
-        FunctionsAndLambds()
+        Review_ClassAndObjects()
+//        FunctionsAndLambds()
     }
 
     fun GettingStarted() {
@@ -188,25 +189,22 @@ class MainActivity : AppCompatActivity() {
 
         val items = listOf(1, 2, 3, 4)
 
-        items.fold(0, {
-            acc: Int, i: Int ->
+        items.fold(0, { acc: Int, i: Int ->
             print("acc = $acc, i = $i, ")
-            val result  = acc + i
+            val result = acc + i
             println("result = $result")
-           result
+            result
         })
 
-        val joinedToString = items.fold("Elements", {
-            acc, i ->
+        val joinedToString = items.fold("Elements", { acc, i ->
             acc + " " + i
         })
 
         val product = items.fold(1, Int::times)
+    }
 
-
-
-
-}
-
+    fun Review_ClassAndObjects() {
+        val derivedClass = DerivedClass("Potter", "Harry")
+    }
 
 }
