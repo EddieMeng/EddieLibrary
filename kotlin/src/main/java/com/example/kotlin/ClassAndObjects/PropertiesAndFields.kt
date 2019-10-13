@@ -1,40 +1,49 @@
 package com.example.kotlin.ClassAndObjects
 
-import javax.security.auth.Subject
 
+/**
+ * <---Declaring Properties--->
+ */
+class Address {
+    var name: String = "Holmes, Sherlock"
+    var street: String = "Baker"
+    var city: String = "London"
+    var state: String? = null
+    var zip: String = "123456"
+}
+
+fun copyAddress(address: Address): Address {
+    val result = Address()
+    result.name = address.name
+    result.street = address.street
+    return result
+}
 
 /**
  * <!--- Getters ans Setters !--->
- *
  */
 
 class GetterAndSetter {
+    // Since Kotlin 1.1, you can omit the (property type) if it can be inferred from the getter:
+    var initialized = 1
 
-    // Since Kotlin 1.1, you can omit the property type if it can be inferred from the getter:
-    val isEmpty
+    // defined custom getter
+    val isEmpty: Boolean
         get() = this.equals("")
 
+    // defined custom setter
     var stringRepresentation
-    get() = this.toString()
-    set(value) {
-        value.toUpperCase()
-    }
+        get() = this.toString()
+        set(value) {
+            value.toUpperCase()
+        }
 
+    // just change the visibility of the field, but do not change the default implementation
     var setterVisibility: String = "abc"
-    private set
+        private set
 
     var setterWithAnnotation: Any? = null
-
-    init {
-        // immutable variable
-        var allByDefault: Int?
-        var initialized = 1
-
-        // mutable variable
-        val simple: Int?
-        val inferredType = 1
-    }
-
+//    @Inject set
 }
 
 
@@ -43,11 +52,23 @@ class GetterAndSetter {
  */
 class BackingFileds {
     var counters = 0
+        set(value) {
+            if (value >= 0) field = value
+        }
+}
+
+class User {
+    var firstname: String? = null
+    // do not call setter inside setter
+//        set(value) {
+//            firstname = value
+//        }
     set(value) {
-        if (value >= 0) field = value
+        field = value
     }
 }
 
+//todo review progress here
 /**
  * <!-- Backing Properties--! >
  */
@@ -56,11 +77,11 @@ class BackingProperties {
 
 }
 
-
 /**
  * <!-- Compile-Time Constants--! >
  */
 const val SUBSYSTEM_DEPRECATED: String = "the subsystem is deprecated"
+
 class CompileTimeConstants {
 
 }
@@ -70,7 +91,7 @@ class CompileTimeConstants {
  * <!-- Late-Initialized Properties and Variables--! >
  *
  */
-class LateInitializedPropertiesAndVariables{
+class LateInitializedPropertiesAndVariables {
     lateinit var subject: Any
 
     fun setUp() {

@@ -50,7 +50,6 @@ class DontCreateMe private constructor() {
 }
 
 
-//todo Review Progress Here
 
 
 open
@@ -110,7 +109,7 @@ open class ClassAndInheritance_Shape() {
     open val vertexCount: Int = 0
 }
 
-class ClassAndInheritance_Rectangle: ClassAndInheritance_Shape() {
+class ClassAndInheritance_Rectangle : ClassAndInheritance_Shape() {
     override val vertexCount: Int = 4
 }
 
@@ -184,15 +183,17 @@ open class ClassAndInheritance_Rectangle2 {
     open fun draw() {
         println("Drawing a rectangle")
     }
+
     val borderColor: String get() = "black"
 
 }
 
-class FilledRectangle: ClassAndInheritance_Rectangle2() {
+class FilledRectangle : ClassAndInheritance_Rectangle2() {
     override fun draw() {
         super.draw()
         println("Filling the rectangle")
     }
+
     val fillColor: String get() = super.borderColor
 
     // access outer class's superclass
@@ -249,7 +250,6 @@ class C : A(), B {
  * <!-- abstract class--!>
  *
  */
-
 open class AbstractExampleBase {
     open fun f() {
 
@@ -257,9 +257,7 @@ open class AbstractExampleBase {
 }
 
 abstract class AbstractExampleDerived : AbstractExampleBase() {
-
     override abstract fun f()
-
 }
 
 /**

@@ -205,6 +205,11 @@ class MainActivity : AppCompatActivity() {
 
     fun Review_ClassAndObjects() {
         val derivedClass = DerivedClass("Potter", "Harry")
+        val user: User = User()
+        user.firstname
     }
+
+
+
 
 }
