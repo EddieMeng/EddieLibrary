@@ -77,23 +77,22 @@ class BackingProperties {
 
 }
 
-// todo review here
 /**
  * <!-- Compile-Time Constants--! >
  */
-const val SUBSYSTEM_DEPRECATED: String = "the subsystem is deprecated"
 
+// const must be declared in top level
+const val SUBSYSTEM_DEPRECATED: String = "the subsystem is deprecated"
 class CompileTimeConstants {
 
 }
-
 
 /**
  * <!-- Late-Initialized Properties and Variables--! >
  *
  */
 class LateInitializedPropertiesAndVariables {
-    lateinit var subject: Any
+    open lateinit var subject: Any
 
     fun setUp() {
         subject = Any()
@@ -106,8 +105,8 @@ class LateInitializedPropertiesAndVariables {
         }
         return false
     }
-
 }
+
 
 
 

@@ -11,15 +11,13 @@ interface MyInterface {
 /**
  * Implement interface
  */
-
 class Child : MyInterface {
-
     override fun bar() {
 
     }
 }
 
-
+//todo Review here
 /**
  * Properties in Interface
  */

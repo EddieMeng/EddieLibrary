@@ -207,6 +207,9 @@ class MainActivity : AppCompatActivity() {
         val derivedClass = DerivedClass("Potter", "Harry")
         val user: User = User()
         user.firstname
+
+
+
     }
 
 
