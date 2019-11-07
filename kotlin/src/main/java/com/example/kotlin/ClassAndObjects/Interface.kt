@@ -37,6 +37,22 @@ class Child2 : MyInterface2 {
 }
 
 
+interface MyInterface3 {
+    val prop: Int
+
+    val propertiesWithImplementation: String get() = "foo"
+
+    fun foo() {
+        println(prop)
+    }
+}
+
+class Child3 : MyInterface3 {
+    override val prop: Int = 30;
+}
+
+
+
 /**
  * Interface Inheritance
  */
@@ -44,6 +60,7 @@ class Child2 : MyInterface2 {
 interface Named {
     val name: String
 }
+
 
 interface PersonAnother : Named {
     val firstname: String
@@ -56,6 +73,17 @@ interface PersonAnother : Named {
 data class Employee(override val firstname: String, override val lastname: String) : PersonAnother {
 
 }
+
+interface Named2 {
+    val firstname2: String
+    val lastname2: String
+}
+
+interface Interface_Person2 : Named2 {
+
+}
+
+
 
 
 /**

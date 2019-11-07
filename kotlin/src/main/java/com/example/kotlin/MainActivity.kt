@@ -208,8 +208,8 @@ class MainActivity : AppCompatActivity() {
         val user: User = User()
         user.firstname
 
-
-
+        val child = Child3()
+        child.foo()
     }
 
 
